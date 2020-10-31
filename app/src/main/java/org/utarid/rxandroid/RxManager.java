@@ -10,6 +10,7 @@ public class RxManager {
         ObserverManager observerManager = new ObserverManager();
 
         observableManager.getNumbersObservable()
+                .filter(s -> Integer.parseInt(s) % 2 == 1)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(observerManager.getNumbersObserver());
