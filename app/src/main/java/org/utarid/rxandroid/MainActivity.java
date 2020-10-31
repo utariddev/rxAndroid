@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        new RxManager();
+        RxManager rxManager = new RxManager();
+
+        binding.button.setOnClickListener(view1 -> {
+            rxManager.destroy();
+        });
     }
 }
