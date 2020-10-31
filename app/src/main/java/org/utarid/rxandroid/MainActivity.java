@@ -1,8 +1,10 @@
 package org.utarid.rxandroid;
 
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
 import org.utarid.rxandroid.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,5 +17,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        new RxManager();
     }
 }
