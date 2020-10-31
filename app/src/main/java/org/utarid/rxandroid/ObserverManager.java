@@ -15,7 +15,10 @@ public class ObserverManager {
     private Disposable disposable;
 
     public ObserverManager() {
+        //basit örnek
         numbersObserver = createNumbersObserver();
+
+        //disposableObservable örneği
         numbersDisposableObserverEven = createNumbersDisposableObserverEven();
         numbersDisposableObserverOdd = createNumbersDisposableObserverOdd();
     }
