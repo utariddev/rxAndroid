@@ -14,6 +14,7 @@ public class RxManager {
         compositeDisposable = new CompositeDisposable();
 
         observableManager.getNumbersObservable()
+                .repeat(2)//observable datasını 2 defa işleyecek
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .filter(s -> Integer.parseInt(s) < 6)//6 dan kucuk sayilar icin calisacak
